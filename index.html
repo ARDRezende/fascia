@@ -8,6 +8,7 @@
 <meta property="og:title" content="Método Fáscia Consciente · Elizabeth Silva">
 <meta property="og:description" content="Mais do que aliviar a dor. Um novo encontro com o seu corpo. Atendimento presencial em São Paulo.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://fasciaconsciente.com.br/img/elizabeth-silva.jpg">
 <meta property="og:url" content="https://fasciaconsciente.com.br/">
 <meta name="theme-color" content="#162A19">
 <link rel="canonical" href="https://fasciaconsciente.com.br/">
@@ -48,6 +49,7 @@ header .btn{min-height:44px;font-size:15px;padding:0 20px}
 .panel svg{color:var(--verde);opacity:.55;height:auto}
 .hero .panel{aspect-ratio:4/5;max-height:600px}
 .hero .panel svg{width:62%}
+.panel.photo{background:var(--sage2)}.panel.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
 .sec{padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(56px,8vw,104px)}
 .alt{background:var(--bege2)}
 .dark{background:var(--esc2);color:var(--bege);position:relative;overflow:hidden}
@@ -99,7 +101,7 @@ footer{background:var(--esc2);color:var(--lt);padding-top:40px;padding-bottom:40
 footer .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
 footer .logo svg{height:40px;width:auto;display:block;color:var(--bege)}
 footer .rt{font-size:14px;line-height:1.5}
-@media (max-width:560px){body{font-size:17px}.hero .panel{aspect-ratio:16/10}.who .panel{aspect-ratio:16/10}.panel svg,.hero .panel svg,.who .panel svg{width:auto;height:78%}.btns .btn{width:100%}header .btn{width:auto}}
+@media (max-width:560px){body{font-size:17px}.hero .panel{aspect-ratio:16/10}.who .panel{aspect-ratio:16/10}.panel svg,.hero .panel svg,.who .panel svg{width:auto;height:78%}.hero .panel.photo{aspect-ratio:4/5}.btns .btn{width:100%}header .btn{width:auto}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
 </head>
@@ -123,7 +125,7 @@ footer .rt{font-size:14px;line-height:1.5}
       </div>
       <p class="cred">Elizabeth Silva · Fisioterapeuta e psicanalista · <span style="white-space:nowrap">CREFITO 137050-F</span></p>
     </div>
-    <div class="panel" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 3318"><g transform="translate(0.000000,3318.000000) scale(0.100000,-0.100000)" fill="currentColor"> <path d="M11750 33174 c-388 -50 -714 -268 -889 -594 -349 -653 -4 -1449 714 -1647 146 -41 429 -41 578 0 239 64 487 229 616 410 28 39 38 45 60 41 14 -2 109 -18 211 -35 1711 -281 3389 -975 4818 -1993 258 -183 657 -495 807 -629 l50 -45 -215 -218 c-1657 -1686 -2776 -3726 -3275 -5969 -26 -115 -48 -211 -50 -213 -2 -2 -36 57 -76 130 -599 1096 -1432 1943 -2746 2794 -488 316 -1260 770 -2059 1212 -893 494 -1201 708 -1629 1137 -187 187 -365 390 -518 592 l-77 103 24 47 c214 427 106 995 -252 1323 -601 551 -1560 326 -1847 -435 -276 -730 272 -1535 1045 -1535 l109 0 113 -147 c476 -623 962 -1088 1536 -1471 252 -169 488 -308 992 -587 1887 -1044 2743 -1623 3421 -2311 509 -519 927 -1146 1168 -1754 29 -74 59 -148 67 -165 7 -16 40 -106 72 -200 33 -93 134 -378 226 -631 l166 -462 0 -298 c0 -549 33 -1069 99 -1592 16 -120 25 -220 22 -224 -3 -4 -69 -29 -146 -56 -667 -236 -1373 -562 -2021 -933 l-171 -97 -704 -87 c-387 -47 -760 -95 -829 -105 -671 -103 -1380 -61 -2080 121 -844 219 -1726 658 -3506 1745 -902 551 -1319 750 -1931 924 -277 79 -698 165 -954 195 -54 6 -57 8 -75 48 -108 241 -381 475 -660 566 -736 239 -1494 -310 -1494 -1084 0 -774 757 -1324 1494 -1084 222 73 449 239 575 422 27 40 35 46 59 42 15 -3 108 -19 207 -35 475 -80 899 -215 1316 -421 275 -136 431 -225 959 -549 2323 -1426 3440 -1892 4855 -2022 86 -8 290 -13 528 -13 l388 0 -33 -29 c-1915 -1670 -3283 -3836 -3942 -6246 -31 -112 -58 -206 -61 -208 -11 -12 -850 286 -1225 435 -1184 469 -2013 973 -2678 1628 -289 284 -466 494 -656 780 -144 216 -325 545 -326 592 0 6 25 37 55 70 478 504 380 1340 -202 1726 -206 137 -411 193 -673 184 -430 -14 -792 -246 -980 -630 -302 -615 -8 -1341 637 -1577 l75 -27 45 -109 c391 -963 1240 -1933 2323 -2653 782 -521 1679 -930 3049 -1392 179 -60 326 -111 328 -113 2 -1 -8 -74 -22 -162 -49 -319 -92 -708 -121 -1099 -18 -255 -27 -1120 -14 -1340 63 -996 239 -2024 531 -3092 l49 -182 -71 -88 c-364 -451 -324 -1117 92 -1524 600 -589 1612 -347 1879 449 212 632 -159 1309 -807 1472 -51 13 -46 -2 -163 465 -314 1246 -460 2419 -421 3385 19 470 81 1132 127 1361 l5 26 67 -19 c1424 -400 3064 -537 4622 -387 3542 340 6809 2171 8955 5019 3146 4174 3452 9825 775 14291 -460 766 -1016 1506 -1601 2131 -66 69 -119 129 -119 131 0 14 444 352 680 519 367 258 814 540 1117 703 l52 28 48 -31 c84 -54 235 -120 338 -148 146 -40 412 -41 556 -2 524 142 864 577 864 1108 0 852 -890 1399 -1653 1016 -338 -170 -580 -518 -618 -889 l-6 -62 -136 -75 c-590 -325 -1276 -788 -1865 -1258 l-178 -143 -102 89 c-1753 1519 -3938 2545 -6222 2922 -132 22 -253 42 -270 45 -24 4 -33 14 -48 48 -79 193 -303 424 -517 532 -179 90 -450 142 -630 119z m8041 -5544 c1186 -1324 2062 -2910 2545 -4611 377 -1330 518 -2736 409 -4104 -25 -307 -92 -865 -106 -880 -3 -2 -90 18 -194 45 -754 197 -1514 322 -2360 386 -281 22 -1198 30 -1505 15 -821 -43 -1697 -167 -2374 -337 -54 -14 -100 -23 -102 -21 -6 6 -42 327 -58 522 -57 675 -48 1517 24 2227 264 2624 1375 4972 3243 6855 l201 202 91 -97 c50 -53 134 -144 186 -202z m-101 -10240 c889 -39 1705 -164 2580 -397 74 -20 139 -39 143 -43 17 -15 -162 -627 -287 -981 -576 -1641 -1466 -3078 -2679 -4329 l-160 -164 -41 45 c-23 25 -95 103 -160 175 -1137 1232 -2039 2794 -2539 4399 -133 427 -263 926 -243 936 6 4 88 25 181 47 1050 251 2150 357 3205 312z m-4401 -867 c514 -2096 1657 -4189 3108 -5694 40 -42 73 -79 73 -81 0 -3 -69 -59 -152 -125 -2427 -1913 -5495 -2782 -8583 -2432 -395 44 -808 114 -1215 204 -233 52 -646 158 -657 168 -21 21 224 816 381 1236 1126 3008 3498 5464 6471 6702 211 88 497 198 515 199 12 0 26 -43 59 -177z"/> </g></svg></div>
+    <div class="panel photo"><img src="img/elizabeth-silva.jpg" alt="Elizabeth Silva, fisioterapeuta e psicanalista, criadora do Método Fáscia Consciente" width="816" height="1280"></div>
   </div>
 </section>
 
