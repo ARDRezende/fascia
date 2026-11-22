@@ -71,10 +71,15 @@ header .btn{min-height:44px;font-size:15px;padding:0 20px}
 .dark .in{position:relative}
 .who{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(32px,5vw,72px)}
 .who .panel{aspect-ratio:1/1;max-height:460px;flex:1 1 320px}
+.who .panel.photo{aspect-ratio:4/5;max-height:620px}
 .who .panel svg{width:58%}
 .who .txt{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px}
 .who .cred{font-size:15px;letter-spacing:.06em;color:var(--esc1)}
 .who .bio{color:var(--ink2)}
+.trail{list-style:none;margin:4px 0 0;padding:0;border-top:1px solid var(--line)}
+.trail li{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.45;color:var(--ink2)}
+.trail .y{flex:none;width:44px;font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.2;color:var(--esc1)}
+
 blockquote{margin:0;font-family:'EB Garamond',Georgia,serif;font-style:italic}
 .who blockquote{font-size:clamp(24px,2.4vw,30px);line-height:1.3;color:var(--esc1);margin-top:8px}
 .cycles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
@@ -97,11 +102,25 @@ blockquote{margin:0;font-family:'EB Garamond',Georgia,serif;font-style:italic}
 .final .btns{justify-content:center;margin-top:8px}
 .final .meta{font-size:15px;color:var(--mute);margin-top:8px}
 .final .more{font-size:15px}
+.faqwrap{display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,72px);align-items:flex-start}
+.faqwrap .head{flex:1 1 260px}
+.faq{flex:2 1 520px;min-width:0;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;padding:18px 0;font-family:'EB Garamond',Georgia,serif;font-size:22px;line-height:1.25;color:var(--esc2)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Jost',sans-serif;font-weight:300;font-size:26px;color:var(--esc1);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq summary:focus-visible{outline:2px solid var(--verde);outline-offset:3px}
+.faq details p{padding:0 0 20px;color:var(--ink2);font-size:17px;max-width:36em}
+
+.places{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:20px;width:100%}
+.place{flex:1 1 240px;max-width:320px;padding:20px 24px;border:1px solid var(--line);border-radius:4px;text-align:center;font-size:15px;line-height:1.5;color:var(--ink2)}
+.place .city{font-family:'EB Garamond',Georgia,serif;font-size:24px;color:var(--esc1);margin-bottom:4px}
 footer{background:var(--esc2);color:var(--lt);padding-top:40px;padding-bottom:40px}
 footer .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
 footer .logo svg{height:40px;width:auto;display:block;color:var(--bege)}
 footer .rt{font-size:14px;line-height:1.5}
-@media (max-width:560px){body{font-size:17px}.hero .panel{aspect-ratio:16/10}.who .panel{aspect-ratio:16/10}.panel svg,.hero .panel svg,.who .panel svg{width:auto;height:78%}.hero .panel.photo{aspect-ratio:4/5}.btns .btn{width:100%}header .btn{width:auto}}
+@media (max-width:560px){body{font-size:17px}.hero .panel{aspect-ratio:16/10}.who .panel{aspect-ratio:16/10}.panel svg,.hero .panel svg,.who .panel svg{width:auto;height:78%}.who .panel.photo{aspect-ratio:4/5}.btns .btn{width:100%}header .btn{width:auto}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
 </head>
@@ -121,11 +140,10 @@ footer .rt{font-size:14px;line-height:1.5}
       <p class="lead">Uma terapia corporal manual e individual para quem convive com dores e tensões que sempre voltam. Toque terapêutico, respiração e movimento consciente, numa jornada de cinco ciclos.</p>
       <div class="btns">
         <a class="btn" href="https://wa.me/5511991881127?text=Ol%C3%A1%20Elizabeth%2C%20vi%20sua%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20F%C3%A1scia%20Consciente" target="_blank" rel="noopener">Conversar com a Elizabeth</a>
-        <a class="btn ghost" href="https://wa.me/5511991881127?text=Ol%C3%A1%20Elizabeth%2C%20quero%20entrar%20na%20lista%20da%20pr%C3%B3xima%20aula%20aberta" target="_blank" rel="noopener">Quero a próxima aula aberta</a>
       </div>
       <p class="cred">Elizabeth Silva · Fisioterapeuta e psicanalista · <span style="white-space:nowrap">CREFITO 137050-F</span></p>
     </div>
-    <div class="panel photo"><img src="img/elizabeth-silva.jpg" alt="Elizabeth Silva, fisioterapeuta e psicanalista, criadora do Método Fáscia Consciente" width="816" height="1280"></div>
+    <div class="panel" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 3318"><g transform="translate(0.000000,3318.000000) scale(0.100000,-0.100000)" fill="currentColor"> <path d="M11750 33174 c-388 -50 -714 -268 -889 -594 -349 -653 -4 -1449 714 -1647 146 -41 429 -41 578 0 239 64 487 229 616 410 28 39 38 45 60 41 14 -2 109 -18 211 -35 1711 -281 3389 -975 4818 -1993 258 -183 657 -495 807 -629 l50 -45 -215 -218 c-1657 -1686 -2776 -3726 -3275 -5969 -26 -115 -48 -211 -50 -213 -2 -2 -36 57 -76 130 -599 1096 -1432 1943 -2746 2794 -488 316 -1260 770 -2059 1212 -893 494 -1201 708 -1629 1137 -187 187 -365 390 -518 592 l-77 103 24 47 c214 427 106 995 -252 1323 -601 551 -1560 326 -1847 -435 -276 -730 272 -1535 1045 -1535 l109 0 113 -147 c476 -623 962 -1088 1536 -1471 252 -169 488 -308 992 -587 1887 -1044 2743 -1623 3421 -2311 509 -519 927 -1146 1168 -1754 29 -74 59 -148 67 -165 7 -16 40 -106 72 -200 33 -93 134 -378 226 -631 l166 -462 0 -298 c0 -549 33 -1069 99 -1592 16 -120 25 -220 22 -224 -3 -4 -69 -29 -146 -56 -667 -236 -1373 -562 -2021 -933 l-171 -97 -704 -87 c-387 -47 -760 -95 -829 -105 -671 -103 -1380 -61 -2080 121 -844 219 -1726 658 -3506 1745 -902 551 -1319 750 -1931 924 -277 79 -698 165 -954 195 -54 6 -57 8 -75 48 -108 241 -381 475 -660 566 -736 239 -1494 -310 -1494 -1084 0 -774 757 -1324 1494 -1084 222 73 449 239 575 422 27 40 35 46 59 42 15 -3 108 -19 207 -35 475 -80 899 -215 1316 -421 275 -136 431 -225 959 -549 2323 -1426 3440 -1892 4855 -2022 86 -8 290 -13 528 -13 l388 0 -33 -29 c-1915 -1670 -3283 -3836 -3942 -6246 -31 -112 -58 -206 -61 -208 -11 -12 -850 286 -1225 435 -1184 469 -2013 973 -2678 1628 -289 284 -466 494 -656 780 -144 216 -325 545 -326 592 0 6 25 37 55 70 478 504 380 1340 -202 1726 -206 137 -411 193 -673 184 -430 -14 -792 -246 -980 -630 -302 -615 -8 -1341 637 -1577 l75 -27 45 -109 c391 -963 1240 -1933 2323 -2653 782 -521 1679 -930 3049 -1392 179 -60 326 -111 328 -113 2 -1 -8 -74 -22 -162 -49 -319 -92 -708 -121 -1099 -18 -255 -27 -1120 -14 -1340 63 -996 239 -2024 531 -3092 l49 -182 -71 -88 c-364 -451 -324 -1117 92 -1524 600 -589 1612 -347 1879 449 212 632 -159 1309 -807 1472 -51 13 -46 -2 -163 465 -314 1246 -460 2419 -421 3385 19 470 81 1132 127 1361 l5 26 67 -19 c1424 -400 3064 -537 4622 -387 3542 340 6809 2171 8955 5019 3146 4174 3452 9825 775 14291 -460 766 -1016 1506 -1601 2131 -66 69 -119 129 -119 131 0 14 444 352 680 519 367 258 814 540 1117 703 l52 28 48 -31 c84 -54 235 -120 338 -148 146 -40 412 -41 556 -2 524 142 864 577 864 1108 0 852 -890 1399 -1653 1016 -338 -170 -580 -518 -618 -889 l-6 -62 -136 -75 c-590 -325 -1276 -788 -1865 -1258 l-178 -143 -102 89 c-1753 1519 -3938 2545 -6222 2922 -132 22 -253 42 -270 45 -24 4 -33 14 -48 48 -79 193 -303 424 -517 532 -179 90 -450 142 -630 119z m8041 -5544 c1186 -1324 2062 -2910 2545 -4611 377 -1330 518 -2736 409 -4104 -25 -307 -92 -865 -106 -880 -3 -2 -90 18 -194 45 -754 197 -1514 322 -2360 386 -281 22 -1198 30 -1505 15 -821 -43 -1697 -167 -2374 -337 -54 -14 -100 -23 -102 -21 -6 6 -42 327 -58 522 -57 675 -48 1517 24 2227 264 2624 1375 4972 3243 6855 l201 202 91 -97 c50 -53 134 -144 186 -202z m-101 -10240 c889 -39 1705 -164 2580 -397 74 -20 139 -39 143 -43 17 -15 -162 -627 -287 -981 -576 -1641 -1466 -3078 -2679 -4329 l-160 -164 -41 45 c-23 25 -95 103 -160 175 -1137 1232 -2039 2794 -2539 4399 -133 427 -263 926 -243 936 6 4 88 25 181 47 1050 251 2150 357 3205 312z m-4401 -867 c514 -2096 1657 -4189 3108 -5694 40 -42 73 -79 73 -81 0 -3 -69 -59 -152 -125 -2427 -1913 -5495 -2782 -8583 -2432 -395 44 -808 114 -1215 204 -233 52 -646 158 -657 168 -21 21 224 816 381 1236 1126 3008 3498 5464 6471 6702 211 88 497 198 515 199 12 0 26 -43 59 -177z"/> </g></svg></div>
   </div>
 </section>
 
@@ -165,13 +183,23 @@ footer .rt{font-size:14px;line-height:1.5}
 </section>
 
 <section class="pad sec">
-  <div class="in who">
-    <div class="panel" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2452"><g transform="translate(0.000000,2452.000000) scale(0.100000,-0.100000)" fill="currentColor"> <path d="M7680 24505 c-454 -97 -713 -549 -565 -986 165 -484 765 -660 1175 -344 44 34 146 141 155 162 2 5 290 -46 441 -77 1210 -250 2360 -800 3317 -1588 70 -58 130 -108 132 -112 3 -4 -45 -59 -107 -121 -1026 -1046 -1726 -2248 -2096 -3599 -32 -118 -76 -299 -118 -489 -4 -21 -14 -8 -63 81 -534 962 -1211 1537 -2947 2508 -649 363 -823 470 -1024 630 -191 152 -428 397 -589 609 -62 81 -64 85 -52 115 100 245 95 464 -16 680 -55 105 -177 237 -276 295 -230 135 -538 137 -767 4 -80 -47 -223 -188 -269 -265 -122 -210 -135 -490 -32 -703 125 -260 357 -417 638 -432 l103 -6 42 -56 c203 -271 545 -631 768 -807 207 -164 450 -321 800 -516 l115 -64 -2 -37 c-5 -83 -127 -359 -250 -567 -275 -462 -739 -1010 -1222 -1445 l-124 -111 -101 35 c-122 42 -296 50 -416 18 -249 -66 -446 -251 -533 -502 -42 -122 -46 -314 -8 -435 111 -358 446 -584 803 -542 385 45 666 354 671 737 l1 100 91 77 c750 634 1473 1567 1710 2208 15 41 31 78 34 83 11 11 471 -266 756 -456 923 -616 1454 -1274 1773 -2198 133 -386 358 -1851 305 -1988 -8 -19 -42 -35 -189 -91 -303 -114 -606 -252 -880 -402 -362 -199 -677 -278 -1424 -359 -277 -30 -776 -37 -990 -15 -699 74 -1325 351 -2735 1211 -815 497 -1243 668 -1887 755 l-86 12 -39 66 c-46 81 -177 215 -255 261 -610 358 -1330 -223 -1103 -889 190 -557 936 -684 1300 -221 56 71 28 70 300 15 462 -92 721 -206 1365 -599 1521 -929 2186 -1219 3060 -1337 139 -18 214 -22 478 -22 l313 -1 -28 -24 c-311 -263 -734 -702 -1033 -1071 -717 -887 -1265 -1945 -1560 -3015 -23 -82 -43 -156 -45 -162 -11 -33 -887 296 -1280 480 -904 422 -1558 997 -1897 1667 l-58 114 44 46 c279 290 265 770 -31 1051 -415 395 -1097 204 -1249 -351 -25 -90 -25 -290 -1 -380 66 -241 265 -455 484 -520 36 -11 43 -18 59 -59 146 -390 479 -866 866 -1236 661 -633 1450 -1054 2826 -1510 l84 -27 -6 -32 c-112 -598 -137 -1479 -61 -2153 54 -474 200 -1201 333 -1658 8 -27 3 -37 -40 -94 -315 -411 -148 -996 334 -1172 544 -199 1108 285 994 851 -56 272 -266 504 -523 576 l-62 17 -17 56 c-106 363 -229 966 -283 1381 -78 606 -78 1202 -1 1808 11 84 20 158 20 165 1 35 15 36 125 6 923 -247 2102 -339 2997 -234 l47 6 -30 -68 c-180 -397 -219 -657 -219 -1469 0 -547 0 -551 -67 -743 l-19 -54 -93 -19 c-613 -124 -829 -869 -373 -1289 372 -342 970 -230 1186 224 110 231 97 513 -35 718 l-30 48 45 133 c68 199 95 322 105 488 10 152 0 497 -20 690 -46 451 121 978 431 1354 123 150 123 150 320 200 1166 296 2288 860 3218 1619 l93 76 162 -136 c475 -397 1062 -784 1597 -1053 45 -23 80 -43 78 -46 -3 -2 -77 -31 -166 -64 -418 -154 -632 -260 -942 -466 -845 -561 -1434 -1364 -2056 -2806 -340 -789 -559 -1174 -875 -1543 -285 -334 -580 -544 -1272 -908 l-218 -115 -67 34 c-163 81 -393 98 -567 41 -360 -118 -581 -504 -500 -873 59 -269 256 -482 525 -566 109 -33 311 -33 420 0 307 96 540 390 540 681 l0 50 108 57 c724 383 1010 567 1308 845 487 454 822 986 1264 2014 558 1296 1066 2002 1787 2487 280 187 428 254 1152 522 l554 204 71 -24 c1092 -375 2380 -510 3646 -383 985 99 1916 371 2739 800 170 89 160 89 186 5 30 -101 25 -115 -67 -187 -129 -99 -349 -290 -394 -342 -157 -179 -179 -372 -105 -953 84 -663 112 -1101 82 -1280 -34 -199 -298 -468 -567 -575 -310 -124 -768 -132 -1349 -24 -464 87 -996 159 -1550 210 -1348 124 -2035 72 -2572 -194 -517 -257 -797 -603 -1023 -1266 -156 -456 -431 -1028 -652 -1359 -186 -276 -540 -540 -953 -711 l-87 -36 -46 43 c-232 217 -564 266 -847 127 -539 -266 -561 -1029 -38 -1330 396 -227 934 -27 1078 401 l15 45 138 55 c523 207 972 521 1248 876 264 338 622 1053 832 1664 102 297 191 463 319 600 232 246 535 366 1068 420 468 47 1976 -79 2830 -236 490 -91 568 -99 955 -99 262 0 347 4 440 18 565 88 999 361 1302 821 231 350 249 686 102 1856 -24 194 -44 382 -44 417 l0 62 103 88 c56 49 152 127 214 175 332 261 393 596 199 1093 l-43 110 113 108 c255 244 340 467 289 763 -41 237 -155 577 -300 898 -36 79 -65 146 -65 149 0 3 51 39 113 79 362 239 736 654 930 1034 227 445 187 795 -135 1186 -28 35 -207 221 -398 413 -497 503 -664 704 -969 1165 -280 421 -436 735 -549 1105 -189 617 -201 1201 -46 2343 134 991 154 1188 154 1537 0 239 -9 371 -41 565 -167 1045 -893 2145 -2099 3184 l-135 116 -1 133 c-4 433 -321 750 -749 750 -656 0 -994 -766 -554 -1256 189 -212 518 -299 784 -209 71 24 54 32 201 -97 1105 -964 1710 -1879 1849 -2791 49 -327 27 -721 -90 -1570 -55 -402 -90 -680 -110 -875 -138 -1365 78 -2281 788 -3344 336 -504 510 -713 1027 -1236 462 -467 498 -513 487 -628 -14 -160 -273 -529 -531 -759 -95 -85 -188 -151 -342 -243 -107 -64 -204 -167 -257 -274 -58 -115 -71 -177 -65 -316 6 -134 29 -208 148 -469 101 -223 218 -560 244 -708 8 -46 -22 -82 -164 -199 -52 -43 -112 -94 -133 -113 -75 -71 -548 -326 -852 -461 -139 -62 -397 -165 -411 -165 -5 0 -22 55 -38 123 -432 1843 -1577 3575 -3135 4741 -598 447 -1256 817 -1936 1088 -82 33 -153 63 -156 66 -4 4 4 77 16 162 372 2525 -405 5071 -2119 6942 -124 136 -123 135 -102 152 309 249 835 606 1126 764 l75 40 62 -38 c116 -70 216 -95 383 -95 228 1 361 56 525 220 237 236 289 577 134 875 -245 471 -896 541 -1241 133 -84 -100 -168 -293 -168 -388 0 -45 -11 -54 -165 -140 -347 -194 -784 -490 -1134 -769 l-143 -114 -152 127 c-1161 974 -2526 1605 -4011 1856 -139 24 -203 39 -210 49 -5 9 -26 44 -45 78 -83 151 -276 297 -455 344 -84 22 -255 27 -335 9z m5324 -3592 c1204 -1325 1899 -2973 2007 -4758 15 -244 6 -912 -15 -1125 -27 -275 -59 -500 -70 -500 -7 0 -81 18 -166 40 -450 115 -883 188 -1405 237 -240 22 -1084 26 -1315 5 -500 -45 -942 -113 -1322 -206 l-98 -23 -5 31 c-59 346 -72 1214 -25 1691 158 1634 735 3001 1786 4227 136 160 479 518 495 518 4 0 64 -62 133 -137z m79 -6813 c389 -23 732 -67 1102 -141 210 -41 584 -134 597 -147 5 -5 -8 -66 -27 -138 -343 -1255 -990 -2392 -1892 -3325 l-136 -140 -44 43 c-66 64 -289 317 -399 453 -578 713 -1024 1518 -1314 2371 -103 302 -233 775 -217 790 9 9 168 47 367 88 322 67 665 114 985 135 88 6 180 13 205 14 116 8 619 6 773 -3z m-2987 -621 c308 -1209 877 -2323 1683 -3299 117 -141 242 -282 334 -376 39 -41 66 -77 63 -83 -21 -33 -374 -297 -603 -450 -1583 -1056 -3501 -1481 -5418 -1200 -263 39 -613 112 -862 180 l-111 31 24 91 c527 1970 1815 3656 3584 4691 200 117 641 339 841 424 195 83 402 162 413 159 5 -2 28 -77 52 -168z m5629 -1 c1987 -853 3551 -2543 4247 -4588 88 -259 228 -760 228 -816 0 -29 -568 -135 -955 -178 -315 -35 -445 -41 -945 -41 -529 1 -642 7 -1020 55 -1430 185 -2807 784 -3913 1703 l-118 98 148 152 c942 965 1687 2265 2038 3557 20 74 38 141 40 147 5 15 31 6 250 -89z"/> </g></svg></div>
+  <div class="in who" style="align-items:flex-start">
+    <div class="panel photo"><img src="img/elizabeth-silva.jpg" alt="Elizabeth Silva, fisioterapeuta e psicanalista, criadora do Método Fáscia Consciente" width="816" height="1280" loading="lazy"></div>
     <div class="txt">
       <p class="eyebrow">Quem conduz</p>
       <h2>Elizabeth Silva</h2>
       <p class="cred">Fisioterapeuta e psicanalista · <span style="white-space:nowrap">CREFITO 137050-F</span></p>
-      <p class="bio">Criou o Método Fáscia Consciente para unir o trabalho no corpo à escuta de quem vive nele: toque, movimento e percepção, numa jornada com começo, meio e fim.</p>
+      <p class="bio">Antes da saúde, foram dez anos em Administração, numa grande instituição financeira. O propósito de cuidar de pessoas falou mais alto: em 2008 ela se formou em Fisioterapia e, desde 2011, é sócia do Pilates In Company, em Osasco.</p>
+      <p class="bio">O Método Fáscia Consciente nasce do encontro entre o trabalho no corpo e a escuta de quem vive nele.</p>
+      <ul class="trail">
+        <li><span class="y">2008</span><span>Fisioterapia · UNIFIEO</span></li>
+        <li><span class="y">2009</span><span>Pilates Terapêutico · Salute Pilates</span></li>
+        <li><span class="y">2011</span><span>Sócia do Pilates In Company</span></li>
+        <li><span class="y">2012</span><span>Pós-graduação em Fisioterapia Musculoesquelética e Desportiva · Universidade Gama Filho</span></li>
+        <li><span class="y">2014</span><span>Liberação Miofascial · Associação Brasileira de Rolfing</span></li>
+        <li><span class="y">2021</span><span>Linguagem do Corpo · Cristina Cairo</span></li>
+        <li><span class="y">2026</span><span>Formação em Psicanálise · Perlabori</span></li>
+      </ul>
       <blockquote>“O corpo não é um problema a ser corrigido. É uma inteligência a ser compreendida.”</blockquote>
     </div>
   </div>
@@ -203,15 +231,35 @@ footer .rt{font-size:14px;line-height:1.5}
   </div>
 </section>
 
+<section class="pad sec alt" id="duvidas">
+  <div class="in faqwrap">
+    <div class="head">
+      <p class="eyebrow">Dúvidas</p>
+      <h2>Antes de conversar</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Como começa?</summary><p>Com uma conversa pelo WhatsApp e uma avaliação inicial. Nela, a Elizabeth observa como o seu corpo se organiza e entende o que trouxe você até aqui.</p></details>
+      <details><summary>Quantas sessões são?</summary><p>A jornada completa tem 15 sessões, em cinco ciclos de três. Cada ciclo parte do anterior, por isso o método é feito do começo ao fim.</p></details>
+      <details><summary>É pilates? É massagem?</summary><p>Nenhum dos dois. O método une toque terapêutico, respiração e movimento consciente numa jornada individual, com foco na fáscia e na percepção do próprio corpo.</p></details>
+      <details><summary>Substitui o acompanhamento médico?</summary><p>Não. O método complementa o cuidado com a saúde. Se a dor é forte, recente ou não passa, procure também uma avaliação médica.</p></details>
+      <details><summary>Onde é o atendimento?</summary><p>Presencialmente, com hora marcada, em Osasco (Pilates In Company) e em Sorocaba (Casa Luar).</p></details>
+      <details><summary>Qual é o investimento?</summary><p>Valores e condições são conversados pelo WhatsApp, depois de entender o seu momento.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="pad final">
   <div class="in">
     <h2>O primeiro passo é uma conversa.</h2>
     <p class="lead">Entender o que o seu corpo vem pedindo e se o método faz sentido para este momento.</p>
     <div class="btns">
       <a class="btn" href="https://wa.me/5511991881127?text=Ol%C3%A1%20Elizabeth%2C%20vi%20sua%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20F%C3%A1scia%20Consciente" target="_blank" rel="noopener">Conversar no WhatsApp</a>
-      <a class="btn ghost" href="https://wa.me/5511991881127?text=Ol%C3%A1%20Elizabeth%2C%20quero%20entrar%20na%20lista%20da%20pr%C3%B3xima%20aula%20aberta" target="_blank" rel="noopener">Entrar na lista da aula aberta</a>
     </div>
-    <p class="meta">Atendimento presencial em Osasco e Sorocaba · <a href="tel:+5511991881127"><span style="white-space:nowrap">(11) 99188-1127</span></a></p>
+    <div class="places">
+      <div class="place"><p class="city">Osasco</p><p>Pilates In Company<br>Rua Francisco Lameu, 520 · Vila Osasco</p></div>
+      <div class="place"><p class="city">Sorocaba</p><p>Casa Luar<br>Rua Caracas, 632</p></div>
+    </div>
+    <p class="meta">Atendimento presencial com hora marcada · <a href="tel:+5511991881127"><span style="white-space:nowrap">(11) 99188-1127</span></a></p>
     <a class="more" href="metodo/">Conhecer o método em detalhes</a>
   </div>
 </section>
